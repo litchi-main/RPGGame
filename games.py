@@ -599,7 +599,7 @@ class Backgammon(StochasticGame):
 
 
 # game.py
-from search import RPGProblem, depth_first_graph_search
+#from search import RPGProblem, depth_first_graph_search
 
 class RPGState:
     def __init__(self, state_info):
@@ -869,7 +869,7 @@ class NuRPG(Game):
                          utility=self.compute_utility(board, state.to_move),
                          board=board, moves=moves)
 
-    def utility(self, state):
+    def utility(self, state, player):
     #grąžina naudingumo reikšmė
         return state.utility
 
