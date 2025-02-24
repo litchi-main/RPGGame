@@ -1,4 +1,9 @@
-"""Games or Adversarial Search (Chapter 5)"""
+"""
+2025-02-23
+Autoriai: PRIfs22/4 Daniel Borkovski
+          PRIfs22/4 Danielius Sauseris
+Mes sukurėme naują klasę NuRPG šiame faile, kuris buvo atsisiūstas iš dėstytojo github'o.
+"""
 
 import copy
 import itertools
@@ -866,12 +871,10 @@ class NuRPG(Game):
 
     def utility(self, state):
     #grąžina naudingumo reikšmė
-        """Return the value to player; 1 for win, -1 for loss, 0 otherwise."""
         return state.utility
 
     def terminal_test(self, state):
     #patikrina, ar pasiekta žaidimo pabaiga
-        """A state is terminal if it is won or there are no empty squares."""
         return state.utility != 0
 
     def display(self, state):
@@ -886,7 +889,6 @@ class NuRPG(Game):
 
     def compute_utility(self, board, player):
         #apskaičiuoja veiksmo naudingumą
-        """If 'X' wins with this move, return 1; if 'O' wins return -1; else return 0."""
         if board["P1"].health <= 0:
             if player == 'X':
                 return -1
